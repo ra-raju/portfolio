@@ -2,3 +2,19 @@
   background-color: rgb(20, 13, 13);
   color: rgb(233, 213, 213);
 }
+
+.hr-row {
+  width: 100px;
+  margin-top: -5px;
+  border: 1px solid greenyellow;
+  border-bottom: none;
+}
+
+.secondary-heading {
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.main-heading {
+  padding: 10px 0;
+}

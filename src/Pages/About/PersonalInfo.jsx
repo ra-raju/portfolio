@@ -3,8 +3,10 @@ import './About.css';
 
 const PersonalInfo = () => {
   return (
-    <div>
-      <h1>Personal Info</h1>
+    <div className="skill-container">
+      <h2 className="secondary-heading">Personal Info</h2>
+      <hr className="hr-row" />
+
       <table>
         <tbody>
           <div className="table-section">
@@ -21,8 +23,6 @@ const PersonalInfo = () => {
                 <td className="table-title">Nationality: </td>
                 <td className="table-value">Bangladeshi</td>
               </tr>
-            </div>
-            <div className="second-table table">
               <tr>
                 <td className="table-title">Email: </td>
                 <td className="table-value">robeyoulawal@gmail.com</td>
