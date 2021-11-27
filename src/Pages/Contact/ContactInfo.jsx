@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactInfo = () => {
   return (
-    <div>
+    <div className="contact-info-section">
       <p>
         Feel free to get in touch with me. I am always open to discussing new
         projects, creative ideas or opportunities to be part of your visions.
