@@ -15,6 +15,14 @@ const About = () => {
       <div className="about">
         <div className="img-section">
           <img className="aboutImg" src={aboutImg} alt="" />
+          <div className="cv-container">
+            <a href="https://drive.google.com/uc?export=download&id=1_bnYH2f9BZcg1WUBbtcwys8__gyVsWQx">
+              <span className="cv-icon">
+                <i className="fas fa-download"></i>
+              </span>
+              resume
+            </a>
+          </div>
         </div>
         <div className="personal-info">
           <PersonalInfo />

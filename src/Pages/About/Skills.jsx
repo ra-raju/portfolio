@@ -10,7 +10,9 @@ const node = 50;
 const Skills = () => {
   return (
     <div className="skill-container">
-      <h3 className="secondary-heading">MY SKILLS</h3>
+      <h3 className="secondary-heading">
+        MY <span className="name">SKILLS</span>
+      </h3>
       <hr className="hr-row" />
       <div className="skills-list">
         <div className="skill">
