@@ -1,13 +1,59 @@
-import { Box, Button, TextField } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
+import { Box, Button, Snackbar, TextField } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+// const axios = require('axios').default;
 
 const ContactForm = () => {
   const { register, handleSubmit, reset } = useForm();
+  const [success, setSuccess] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  const action = (
+    <React.Fragment>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </React.Fragment>
+  );
 
   const onSubmit = (data) => {
-    console.log(data);
-    reset();
+    // console.log(data);
+
+    fetch('http://localhost:8000/message', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.messageId) {
+          reset();
+          setSuccess(true);
+          setOpen(true);
+        }
+      })
+      .catch((err) => {
+        console.log(err.message);
+        setSuccess(false);
+      });
   };
   return (
     <div className="contact-form-section">
@@ -76,6 +122,15 @@ const ContactForm = () => {
             Contained
           </Button>
         </Box>
+        {success && (
+          <Snackbar
+            open={open}
+            autoHideDuration={6000}
+            onClose={handleClose}
+            message="Message sent successfully"
+            action={action}
+          />
+        )}
       </form>
     </div>
   );
