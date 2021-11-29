@@ -30,7 +30,7 @@ const AddProject = () => {
     formData.append('technologies', technologies);
     formData.append('liveLink', liveLink);
 
-    fetch('http://localhost:8000/project', {
+    fetch('https://frozen-retreat-32896.herokuapp.com/project', {
       method: 'POST',
       body: formData,
     })

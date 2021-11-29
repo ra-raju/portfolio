@@ -1,8 +1,9 @@
 .about-section {
   text-align: center;
   width: 100%;
-  height: auto;
-  padding: 15px 0;
+  min-height: 100vh;
+  padding-top: 5px;
+  padding-bottom: 15px;
 }
 
 .about {

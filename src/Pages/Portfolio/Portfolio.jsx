@@ -1,5 +1,6 @@
 import { Grid } from '@mui/material';
 import React from 'react';
+import Navigation from '../Shared/Navigation/Navigation';
 import './Portfolio.css';
 import ProjectCard from './ProjectCard';
 
@@ -32,26 +33,29 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <div className="portfolio-container">
-      <h1 className="main-heading">
-        My <span className="name">PROJECTS</span>
-      </h1>
-      <Grid
-        container
-        spacing={{ xs: 2, md: 3 }}
-        columns={{ xs: 4, sm: 8, md: 12 }}
-        sx={{ textalign: 'center' }}
-      >
-        {projects
-          .slice(0)
-          .reverse()
-          .map((project) => (
-            <Grid item xs={4} sm={4} md={6} key={project.name}>
-              <ProjectCard project={project} />
-            </Grid>
-          ))}
-      </Grid>
-    </div>
+    <>
+      <Navigation />
+      <div className="portfolio-container">
+        <h1 className="main-heading">
+          My <span className="name">PROJECTS</span>
+        </h1>
+        <Grid
+          container
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 4, sm: 8, md: 12 }}
+          sx={{ textalign: 'center' }}
+        >
+          {projects
+            .slice(0)
+            .reverse()
+            .map((project) => (
+              <Grid item xs={4} sm={4} md={6} key={project.name}>
+                <ProjectCard project={project} />
+              </Grid>
+            ))}
+        </Grid>
+      </div>
+    </>
   );
 };
 

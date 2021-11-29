@@ -34,7 +34,7 @@ const ContactForm = () => {
   const onSubmit = (data) => {
     // console.log(data);
 
-    fetch('http://localhost:8000/message', {
+    fetch('https://frozen-retreat-32896.herokuapp.com/message', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
