@@ -95,6 +95,14 @@
 
 @media screen and (max-width: 400px) {
   .project-card {
-    margin: 0 10px;
+    width: 300px;
+  }
+  .project-card-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .live-preview a {
+    width: 300px;
   }
 }
