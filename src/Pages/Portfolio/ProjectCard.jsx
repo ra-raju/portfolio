@@ -1,49 +1,57 @@
 import React from 'react';
 
 const ProjectCard = ({ project }) => {
-  const {
-    name,
-    img,
-    client_side,
-    server_side,
-    Live_Preview,
+  const { projectName, img, clientLink, serverLink, liveLink, technologies } =
+    project;
+  const technology = technologies.split(',');
 
-    technologies,
-  } = project;
-  // console.log(technologies);
-
-  technologies.map((tech) => console.log(tech));
+  // technologies.map((tech) => console.log(tech));
   return (
     <div>
       <div className="project-card">
         <div className="project-card-image">
-          <img src={img} alt={name} />
+          <img src={`data:image/*;base64, ${img}`} alt={projectName} />
         </div>
         <div className="project-card-content">
-          <h3 className="porject-name">{name}</h3>
+          <h3 className="project-name">{projectName}</h3>
           <div className="source-code">
             <div className="client-side">
               {' '}
-              <a href={client_side} className="code-link">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={clientLink}
+                className="code-link"
+              >
                 {' '}
                 client side
               </a>
             </div>
-            <div className="server-side">
-              <a href={server_side} className="code-link">
-                server code
-              </a>
-            </div>
+            {serverLink && (
+              <div className="server-side">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href={serverLink}
+                  className="code-link"
+                >
+                  server code
+                </a>
+              </div>
+            )}
           </div>
           <div className="technologies">
-            {technologies.map((tech) => (
+            {technology.map((tech) => (
               <span key={tech} className="tech">
                 {tech}
               </span>
             ))}
           </div>
           <div className="live-preview">
-            <a href={Live_Preview}> Live Link</a>
+            <a target="_blank" rel="noreferrer" href={liveLink}>
+              {' '}
+              Live Preview
+            </a>
           </div>
         </div>
       </div>

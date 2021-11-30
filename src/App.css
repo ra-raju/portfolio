@@ -1,6 +1,7 @@
 .App {
   background-color: rgb(20, 13, 13);
   color: rgb(233, 213, 213);
+  min-height: 100vh;
 }
 
 .hr-row {

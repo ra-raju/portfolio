@@ -117,7 +117,7 @@ const AddProject = () => {
         </Box>
         <Box>
           <TextField
-            id="filled-basic"
+            type="url"
             label="Client Side Link"
             variant="filled"
             sx={{ backgroundColor: 'blanchedalmond', width: '300px', my: 1 }}
@@ -126,7 +126,7 @@ const AddProject = () => {
         </Box>
         <Box>
           <TextField
-            id="filled-basic"
+            type="url"
             label="Server Side Link"
             variant="filled"
             sx={{ backgroundColor: 'blanchedalmond', width: '300px', my: 1 }}
@@ -135,7 +135,7 @@ const AddProject = () => {
         </Box>
         <Box>
           <TextField
-            id="filled-basic"
+            type="text"
             label="Technologies"
             variant="filled"
             placeholder="use comma after every tech name"
@@ -145,7 +145,7 @@ const AddProject = () => {
         </Box>
         <Box>
           <TextField
-            id="filled-basic"
+            type="url"
             label="Live Preview"
             variant="filled"
             sx={{ backgroundColor: 'blanchedalmond', width: '300px', my: 1 }}

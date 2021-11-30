@@ -25,6 +25,11 @@
     -5px -5px 12px rgba(66, 64, 64, 0.697);
 }
 
+.project-name {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
 .project-card-image {
   width: 400px;
   height: 300px;
@@ -50,16 +55,17 @@
   text-decoration: none;
   text-transform: capitalize;
   color: white;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  padding: 5px 0;
 }
 
 .code-link:hover {
-  text-decoration: underline 2px gold;
   color: rgb(173, 156, 156);
+  border-bottom: 2px solid goldenrod;
 }
 
 .technologies {
@@ -77,16 +83,18 @@
   border-radius: 5px;
 }
 
-.live-preview {
-  height: 20px;
-  width: 400px;
-  background-color: gold;
-  margin-top: 10px;
-  padding: 10px 0;
-  overflow: hidden;
-  text-align: center;
-}
 .live-preview a {
   text-decoration: none;
   color: rgb(107, 33, 33);
+  background-color: chartreuse;
+  display: inline-block;
+  width: 400px;
+  padding: 5px 0;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 400px) {
+  .project-card {
+    margin: 0 10px;
+  }
 }
