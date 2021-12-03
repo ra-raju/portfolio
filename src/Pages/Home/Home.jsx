@@ -1,5 +1,5 @@
 import React from 'react';
-// import Bounce from 'react-reveal/Bounce';
+import Typewriter from 'typewriter-effect';
 import heroImg from '../../images/mybg.png';
 import Navigation from '../Shared/Navigation/Navigation';
 import './Home.css';
@@ -14,9 +14,17 @@ const Home = () => {
         </div>
 
         <div className="home-content">
-          <h1 className="home-heading">
-            I'M <span className="name">ROBEYOUL AWAL RAJU</span>
-            <br /> MERN DEVELOPER
+          <h1 className="home-heading ">
+            I'M{' '}
+            <span className="name">
+              <Typewriter
+                options={{
+                  strings: ['ROBEYOUL AWAL RAJU', 'MERN DEVELOPER'],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </span>
           </h1>
 
           <div className="cv-container">
@@ -28,7 +36,7 @@ const Home = () => {
             </a>
           </div>
 
-          <p className="home-paragraph">
+          <p className="home-paragraph animate__animated animate__backInRight">
             {' '}
             I am a self taught MERN developer with a BBA degree (running) in
             Finance in University of Rajshahi. I've always found coding
