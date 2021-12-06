@@ -1,6 +1,6 @@
 import { Box, CircularProgress, Grid } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import Navigation from '../Shared/Navigation/Navigation';
+import Navigation1 from '../Shared/Navigation1';
 import './Portfolio.css';
 import ProjectCard from './ProjectCard';
 
@@ -20,7 +20,7 @@ const Portfolio = () => {
   }, []);
   return (
     <>
-      <Navigation />
+      <Navigation1 />
       <div className="portfolio-container">
         <h1 className="main-heading">
           My <span className="name">PROJECTS</span>

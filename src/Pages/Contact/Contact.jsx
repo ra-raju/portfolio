@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material';
 import React from 'react';
-import Navigation from '../Shared/Navigation/Navigation';
+import Navigation1 from '../Shared/Navigation1';
 import './Contact.css';
 import ContactForm from './ContactForm';
 import ContactInfo from './ContactInfo';
@@ -8,7 +8,7 @@ import ContactInfo from './ContactInfo';
 const Contact = () => {
   return (
     <>
-      <Navigation />
+      <Navigation1 />
       <section className="contact-section">
         <h1 className="main-heading">
           Get in <span className="name">touch</span>

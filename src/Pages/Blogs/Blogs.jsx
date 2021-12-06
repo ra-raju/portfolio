@@ -1,10 +1,10 @@
 import React from 'react';
-import Navigation from '../Shared/Navigation/Navigation';
+import Navigation1 from '../Shared/Navigation1';
 
 const Blogs = () => {
   return (
     <div>
-      <Navigation />
+      <Navigation1 />
       <h1>Blogs are comming soon</h1>
     </div>
   );

@@ -1,13 +1,14 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
 import heroImg from '../../images/mybg.png';
-import Navigation from '../Shared/Navigation/Navigation';
+import Navigation1 from '../Shared/Navigation1';
 import './Home.css';
 
 const Home = () => {
   return (
     <>
-      <Navigation />
+      <Navigation1 />
+
       <section className="heroSection">
         <div className="img-section">
           <img className="heroImg" src={heroImg} alt="" />

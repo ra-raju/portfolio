@@ -1,0 +1,32 @@
+.nav-container {
+  margin: 15px 0;
+}
+.navlink {
+  text-decoration: none;
+}
+
+.navlink .nav-icon {
+  margin: 0 10px 0 20px;
+  color: white;
+  font-size: 20px;
+  color: gold;
+}
+
+.navlink .nav-text {
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.navlink:hover .nav-text {
+  color: rgb(161, 159, 144);
+}
+
+.back-button:hover {
+  background-color: white;
+}

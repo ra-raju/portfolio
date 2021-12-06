@@ -1,7 +1,7 @@
 // import { Grid } from '@mui/material';
 import React from 'react';
 import aboutImg from '../../images/about.JPG';
-import Navigation from '../Shared/Navigation/Navigation';
+import Navigation1 from '../Shared/Navigation1';
 import './About.css';
 import PersonalInfo from './PersonalInfo';
 import Skills from './Skills';
@@ -9,7 +9,7 @@ import Skills from './Skills';
 const About = () => {
   return (
     <>
-      <Navigation />
+      <Navigation1 />
       <section className="about-section">
         <h1 className="main-heading">
           ABOUT <span className="name">ME</span>
