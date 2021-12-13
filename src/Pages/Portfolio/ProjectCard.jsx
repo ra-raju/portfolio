@@ -5,7 +5,6 @@ const ProjectCard = ({ project }) => {
     project;
   const technology = technologies.split(',');
 
-  // technologies.map((tech) => console.log(tech));
   return (
     <div>
       <div className="project-card">
@@ -23,7 +22,9 @@ const ProjectCard = ({ project }) => {
                 href={clientLink}
                 className="code-link"
               >
-                {' '}
+                <span className="card-icon">
+                  <i className="fas fa-code"></i>
+                </span>
                 client side
               </a>
             </div>
@@ -35,6 +36,9 @@ const ProjectCard = ({ project }) => {
                   href={serverLink}
                   className="code-link"
                 >
+                  <span className="card-icon">
+                    <i className="fas fa-code"></i>
+                  </span>
                   server code
                 </a>
               </div>
@@ -43,13 +47,15 @@ const ProjectCard = ({ project }) => {
           <div className="technologies">
             {technology.map((tech) => (
               <span key={tech} className="tech">
-                {tech}
+                {tech.toUpperCase()}
               </span>
             ))}
           </div>
           <div className="live-preview">
             <a target="_blank" rel="noreferrer" href={liveLink}>
-              {' '}
+              <span className="card-icon-live">
+                <i className="fas fa-globe"></i>
+              </span>
               Live Preview
             </a>
           </div>

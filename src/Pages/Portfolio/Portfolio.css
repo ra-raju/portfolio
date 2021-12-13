@@ -65,7 +65,6 @@
 
 .code-link:hover {
   color: rgb(173, 156, 156);
-  border-bottom: 2px solid goldenrod;
 }
 
 .technologies {
@@ -86,11 +85,30 @@
 .live-preview a {
   text-decoration: none;
   color: rgb(107, 33, 33);
-  background-color: chartreuse;
+  background-color: rgb(97, 163, 30);
   display: inline-block;
   width: 400px;
   padding: 5px 0;
   font-weight: 700;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.live-preview a:hover {
+  background-color: gold;
+  color: black;
+}
+
+.card-icon {
+  margin-right: 10px;
+  color: gold;
+}
+.card-icon-live {
+  margin-right: 10px;
+  color: black;
 }
 
 @media screen and (max-width: 400px) {
